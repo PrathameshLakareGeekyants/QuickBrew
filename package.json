@@ -9,6 +9,7 @@
     "ios": "DARK_MODE=media expo start --ios",
     "web": "DARK_MODE=class expo start --web",
     "lint": "expo lint",
+    "lint:fix": "expo lint --fix",
     "typecheck": "tsc --noEmit",
     "validate": "npm run lint && npm run typecheck",
     "prepare": "husky"
@@ -66,9 +67,13 @@
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
     "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.19",
     "typescript": "~5.9.2"
   },
-  "private": true
+  "private": true,
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
+  }
 }
