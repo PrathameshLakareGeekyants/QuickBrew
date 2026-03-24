@@ -25,6 +25,14 @@
    npm run android  # Android
    ```
 
+## Commit and push checks
+
+After you run `npm install`, Git checks run for you automatically ([Husky](https://typicode.github.io/husky/)).
+
+- **When you commit:** use a message like `feat: add login` — start with a type (`feat`, `fix`, …), then a short description in **lowercase**.
+- **When you push:** the project runs lint and TypeScript checks first. If something fails, fix it or run `npm run validate` locally to see the same errors.
+- **To skip a check (only when needed):** add `--no-verify` to `git commit` or `git push`.
+
 ## Features
 
 - **📱 Cross-platform** — iOS & Android
